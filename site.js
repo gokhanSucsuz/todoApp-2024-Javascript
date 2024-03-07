@@ -18,7 +18,7 @@ let liArray = [];
 liCollection = document.querySelectorAll("li");
 liArray = Array.from(liCollection);
 badge.textContent = liArray.length.toString();
-let index = liArray.length;
+let index = 1;
 
 eventListeners();
 
@@ -46,12 +46,12 @@ function addNewTask(e) {
 		const li = document.createElement("li");
 		li.classList =
 			index % 2 == 1
-				? "list-group-item d-flex align-items-center fs-5"
-				: "list-group-item list-group-item-dark d-flex align-items-center fs-5";
+				? "list-group-item fs-5"
+				: "list-group-item list-group-item-dark fs-5";
 		li.appendChild(document.createTextNode(txtInput.value));
 
 		const a = document.createElement("a");
-		a.classList = "btn btn-sm float-end";
+		a.classList = "float-end";
 		a.setAttribute("href", "#");
 
 		a.innerHTML =
@@ -102,7 +102,7 @@ function updateValue() {
 		if (index == updateIndex) {
 			item.textContent = txtInput.value;
 			const a = document.createElement("a");
-			a.classList = "btn btn-sm float-end";
+			a.classList = "float-end";
 			a.setAttribute("href", "#");
 
 			a.innerHTML =
