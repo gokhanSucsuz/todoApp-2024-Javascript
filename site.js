@@ -40,7 +40,6 @@ function addNewTask(e) {
 		txtInput.value = "";
 		return;
 	}
-
 	if (modeUpdate) {
 		updateValue();
 	} else {
