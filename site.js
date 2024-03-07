@@ -9,7 +9,7 @@ const btnUpdateTask = document.querySelector("#btnUpdateTask");
 const badge = document.querySelector("#badge");
 const toastTrigger = document.getElementById("btnAddNewTask");
 const toastLiveExample = document.getElementById("liveToast");
-let index = 1;
+
 let updateIndex;
 let updatedText = "";
 let modeUpdate = false;
@@ -18,6 +18,7 @@ let liArray = [];
 liCollection = document.querySelectorAll("li");
 liArray = Array.from(liCollection);
 badge.textContent = liArray.length.toString();
+let index = liArray.length;
 
 eventListeners();
 
@@ -76,9 +77,9 @@ function deleteAll() {
 }
 
 function deleteUpdateItem(e) {
-	if (e.target.className === "bi bi-x-circle") {
+	if (e.target.className === "bi bi-x-circle fs-5 text-danger") {
 		e.target.parentElement.parentElement.remove();
-	} else if (e.target.className === "bi bi-pencil-square") {
+	} else if (e.target.className === "bi bi-pencil-square fs-5 text-warning") {
 		txtInput.value = e.target.parentElement.parentElement.textContent.trim();
 		btnUpdateTask.classList.remove("d-none");
 		btnUpdateTask.classList.add("d-block");
@@ -106,7 +107,7 @@ function updateValue() {
 			a.setAttribute("href", "#");
 
 			a.innerHTML =
-				"<i class='bi bi-pencil-square'> </i><i class='bi bi-x-circle'></i>";
+				"<i class='bi bi-pencil-square fs-5 text-warning'> </i><i class='bi bi-x-circle fs-5 text-danger'></i>";
 			item.appendChild(a);
 		}
 	});
