@@ -14,9 +14,7 @@ let updateIndex;
 let updatedText = "";
 let modeUpdate = false;
 let liCollection = [];
-let liArray = [];
-liCollection = document.querySelectorAll("li");
-liArray = Array.from(liCollection);
+let liArray = []
 
 let index = 1;
 
