@@ -17,7 +17,7 @@ let liCollection = [];
 let liArray = [];
 liCollection = document.querySelectorAll("li");
 liArray = Array.from(liCollection);
-badge.textContent = liArray.length.toString();
+
 let index = 1;
 
 eventListeners();
